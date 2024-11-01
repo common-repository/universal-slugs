@@ -1,0 +1,121 @@
+<?php
+/**
+ * Use this little script to generate mappings and stopwords for other languages.
+ * Simply replace your language's unique characters with their latin equivalents, and run the script.
+ * That will generate the mapping files and instructions on how to save them.
+ * If you generate mappings for your languages, please send them to us to incorporate in the plugin!
+*/
+$langname = "el_GR";
+
+$mappings = array( "α" => "a",
+  "ά" => "a",
+  "Α" => "a",
+  "Ά" => "a",
+  "β" => "b",
+  "Β" => "b",
+  "γ" => "g",
+  "Γ" => "g",
+  "δ" => "d",
+  "Δ" => "d",
+  "ε" => "e",
+  "έ" => "e",
+  "Ε" => "e",
+  "Έ" => "e",
+  "ζ" => "z",
+  "Ζ" => "z",
+  "η" => "i",
+  "ή" => "i",
+  "Η" => "i",
+  "Ή" => "i",
+  "θ" => "th",
+  "Θ" => "th",
+  "ι" => "I",
+  "ί" => "I",
+  "Ι" => "I",
+  "Ί" => "I",
+  "κ" => "k",
+  "Κ" => "k",
+  "λ" => "l",
+  "Λ" => "l",
+  "μ" => "m",
+  "Μ" => "m",
+  "ν" => "n",
+  "Ν" => "n",
+  "ξ" => "x",
+  "Ξ" => "x",
+  "ο" => "o",
+  "Ο" => "o",
+  "ό" => "o",
+  "Ό" => "o",
+  "π" => "p",
+  "Π" => "p",
+  "ρ" => "r",
+  "Ρ" => "r",
+  "σ" => "s",
+  "Σ" => "s",
+  "ς" => "s",
+  "τ" => "t",
+  "Τ" => "t",
+  "υ" => "y",
+  "ύ" => "y",
+  "Υ" => "y",
+  "Ύ" => "y",
+  "φ" => "f",
+  "Φ" => "f",
+  "χ" => "x",
+  "Χ" => "x",
+  "ψ" => "x",
+  "Ψ" => "x",
+  "ω" => "o",
+  "ώ" => "o",
+  "Ώ" => "o",
+  "Ω" => "o",
+  "αι" => "ai",
+  "αί" => "ai",
+  "άι" => "ai",
+  "ΑΙ" => "ai",
+  "ΑΊ" => "ai",
+  "ΆΙ" => "ai",
+  "οι" => "oi",
+  "οί" => "oi",
+  "όι" => "oi",
+  "ΟΙ" => "oi",
+  "ΟΊ" => "oi",
+  "ΌΙ" => "oi",
+  "ει" => "ei",
+  "έι" => "ei",
+  "ΕΙ" => "ei",
+  "ΕΊ" => "ei",
+  "ΈΙ" => "ei",
+  "ου" => "ou",
+  "όυ" => "ou",
+  "ού" => "ou",
+  "ΟΥ" => "ou",
+  "ΌΥ" => "ou",
+  "ΟΎ" => "ou",
+  "αυ" => "au",
+  "αύ" => "au",
+  "άυ" => "au",
+  "ΆΥ" => "au",
+  "ΑΎ" => "au",
+  "ΑΥ" => "au",
+  "ευ" => "eu",
+  "εύ" => "eu",
+  "έυ" => "eu",
+  "ΕΥ" => "eu",
+  "ΕΎ" => "eu",
+  "ΈΥ" => "eu"
+);
+
+$stopwords = array("ο","η","το","του","τις","της","τα","τους","των","με","και",
+  "αφου","για","σε","σου","δεν","μέσα","έξω","μετά","όταν","οταν","επίσης","επισης","πριν","μετά","μετά");
+
+
+echo "Create a file called {$langname}.dat in <plugin>/languages/mappings/, and copy the following content:\n";
+echo serialize($mappings);
+echo "\n---------------------------------------------------------";
+echo "\n\n";
+echo "Create a file called {$langname}.dat in <plugin>/languages/stopwords/, and copy the following content:\n";
+echo serialize($stopwords);
+echo "\n---------------------------------------------------------";
+?>
